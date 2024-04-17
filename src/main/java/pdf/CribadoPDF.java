@@ -4,7 +4,6 @@
  */
 package pdf;
 
- 
 import com.ejemplo.MainView;
 import com.itextpdf.kernel.colors.DeviceRgb;
 import com.itextpdf.kernel.pdf.PdfDocument;
@@ -14,7 +13,6 @@ import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.properties.TextAlignment;
 import com.vaadin.componentfactory.pdfviewer.PdfViewer;
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
@@ -29,22 +27,23 @@ import org.apache.commons.io.FileUtils;
 
 /**
  *
- * @author 06553669A
+ * @author ferna
  */
 @Log4j2
-@Route(value = "TensionArterialPDF", layout = MainView.class)
-public class TensionArterialPDF extends VerticalLayout{
-   // private String TABLACARDIOpdf ="C:\\temp\\ficherosPDFvaadin\\TablaCardio.pdf";
-    private String TABLACARDIOpdf ="TablaCardio.pdf";
+@Route(value = "CribadoPDF", layout = MainView.class)
+public class CribadoPDF extends VerticalLayout {
 
-    public TensionArterialPDF() {
-        log.info("Inicio de generar la PDF Tensión Arterial");
-        H1 titulo= new H1("Generando Fichero Tensión Arterial");
+   // private String TABLACARDIOpdf ="C:\\temp\\ficherosPDFvaadin\\TablaCribado.pdf";
+    private String CRIBADOpdf ="TablaCribado.pdf";
+
+    public CribadoPDF() {
+        log.info("Inicio de generar la PDF Cribado");
+        H1 titulo= new H1("Generando Fichero Cribado");
         add(titulo);
         try {
-            File fileTablaCardio = new File(TABLACARDIOpdf);
-            PdfWriter pdfWriteTablaCardio = new PdfWriter(fileTablaCardio);
-            PdfDocument pdfDocumento = new PdfDocument(pdfWriteTablaCardio);
+            File fileTablaCribado = new File(CRIBADOpdf);
+            PdfWriter pdfWriteTablaCribado = new PdfWriter(fileTablaCribado);
+            PdfDocument pdfDocumento = new PdfDocument(pdfWriteTablaCribado);
             pdfDocumento.setDefaultPageSize(com.itextpdf.kernel.geom.PageSize.A4.rotate());
 
             Document documento=new Document(pdfDocumento);
@@ -58,24 +57,25 @@ public class TensionArterialPDF extends VerticalLayout{
             muestraPDF();
             
         } catch (FileNotFoundException ex) {
-            log.error("Error generando PDF Tensión Arterial");
+            log.error("Error generando PDF Cribado");
             Logger.getLogger(TensionArterialPDF.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     private Paragraph getTituloDocumento() {
         Paragraph parrafo= new Paragraph();
-        parrafo.add("CONTROL DE LA TENSIÓN ARTERIAL Y LA FRECUENCIA CARDIACA DEL PACIENTE:");
+        parrafo.add("CONTROL DEL CRIBADO COLORECTAL DEL PROFESIONAL:");
+        parrafo.setBold();
         return parrafo;
     }
 
     private Table getTabla() {
-        float[] pointColumnWidths={60F,200F,200F,200F,200F};
+        float[] pointColumnWidths={60F,110F,300F,100F,100F,200F};
         Table tablaDocumento= new Table(pointColumnWidths);
       for (int i = 0; i < 16; i++) {
             //tablaDocumento.addCell("").setHeight(50);
-            for (int j=0;j<5;j++)
-            tablaDocumento.addCell("").setHeight(280).setBackgroundColor(new DeviceRgb(255,255,255));
+            for (int j=0;j<6;j++)
+            tablaDocumento.addCell("").setHeight(580).setBackgroundColor(new DeviceRgb(255,255,255));
             
         }
         
@@ -91,8 +91,8 @@ public class TensionArterialPDF extends VerticalLayout{
     //pdfViewer.setSrc(resource);
     pdfViewer.setSrc("/temp/prueba2.pdf");
     */
-    //StreamResource resource = new StreamResource("C:\\temp\\ficherosPDFvaadin\\TablaCardio.pdf", () -> crearRecurso(TABLACARDIOpdf));
-        StreamResource resource = new StreamResource("TablaCardio.pdf", () -> crearRecurso(TABLACARDIOpdf));
+    //StreamResource resource = new StreamResource("C:\\temp\\ficherosPDFvaadin\\TablaCribado.pdf", () -> crearRecurso(TABLACARDIOpdf));
+        StreamResource resource = new StreamResource("TablaCribado.pdf", () -> crearRecurso(CRIBADOpdf));
         
     pdfViewer.setSrc(resource);
             add(pdfViewer);
@@ -111,17 +111,16 @@ public class TensionArterialPDF extends VerticalLayout{
     }
 
     private Table getTablaTitulos() {
-        float[] pointColumnWidths={60F,200F,200F,200F,200F};
+        float[] pointColumnWidths={60F,110F,300F,100F,100F,200F};
         Table tablaTitulos= new Table(pointColumnWidths);
         tablaTitulos.addCell("Ord.").setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
-        tablaTitulos.addCell("FECHA").setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
-        tablaTitulos.addCell("HORA").setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
-        tablaTitulos.addCell("TENSIÓN ARTERIAL").setTextAlignment(TextAlignment.CENTER).setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));;
-        tablaTitulos.addCell("FRECUENCIA CARDIACA").setTextAlignment(TextAlignment.CENTER).setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
+        tablaTitulos.addCell("HISTORIA").setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
+        tablaTitulos.addCell("NOMBRE").setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
+        tablaTitulos.addCell("SOLICITADO").setTextAlignment(TextAlignment.CENTER).setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));;
+        tablaTitulos.addCell("RESULTADOS").setTextAlignment(TextAlignment.CENTER).setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
+        tablaTitulos.addCell("OBSERVACION").setTextAlignment(TextAlignment.CENTER).setBold().setBackgroundColor(new DeviceRgb(135, 206, 250));
+
         return tablaTitulos;
     }
     
 }
-
-  
-    

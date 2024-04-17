@@ -42,8 +42,10 @@ public class MainView extends AppLayout {
         SideNavItem ayudasLink= new SideNavItem("Ayudas Teodora",AyudasTeodoraUI.class,VaadinIcon.PENCIL.create());
         ayudasLink.addItem(new SideNavItem("AyudaTeodora","/AyudasTeodora",VaadinIcon.INFO.create()));
         SideNavItem pdfLink= new SideNavItem("PDFs",PdfsUI.class,VaadinIcon.PAPERPLANE.create());
-        pdfLink.addItem(new SideNavItem("Cribado","/CribadoPDF",VaadinIcon.VOLUME.create()));
+        pdfLink.addItem(new SideNavItem("Cribado","/CribadoPDF",VaadinIcon.NOTEBOOK.create()));
         pdfLink.addItem(new SideNavItem("Tensión Arterial","/TensionArterialPDF",VaadinIcon.HEART.create()));
+        pdfLink.addItem(new SideNavItem("Control Sensores","/ControlSensores",VaadinIcon.CONTROLLER.create()));
+
          
          sideNav.addItem(ayudasLink,pdfLink);
         return sideNav;
