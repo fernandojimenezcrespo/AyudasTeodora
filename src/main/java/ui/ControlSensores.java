@@ -63,7 +63,7 @@ public ControlSensores() {
         Button btnGenerarPDF=new Button("Generar PDF");
         btnGenerarPDF.addClickListener(e->{
             ArrayList<String> arrPacientes=cargaNombresPacientes();
-            ControlSensoresPDF controlSensorPDF = new ControlSensoresPDF();
+            ControlSensoresPDF controlSensorPDF = new ControlSensoresPDF(arrPacientes);
             removeAll();
             add(controlSensorPDF);
         });
