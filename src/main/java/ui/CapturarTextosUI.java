@@ -48,6 +48,7 @@ public class CapturarTextosUI extends VerticalLayout {
             Notification.show(String.format("File location: %s", item.getItem()));
             UI.getCurrent().getPage().executeJs("window.copyToClipboard($0)", item.getItem());
             btnTextoCopiado.setText(item.getItem());
+
         });
 
         add(gridTextos);
@@ -58,15 +59,15 @@ public class CapturarTextosUI extends VerticalLayout {
 
         //radioGroup.addThemeVariants(RadioGroupVariant.LUMO_VERTICAL);
         radioGroup.setLabel("Opciones de ");
-        radioGroup.setItems("Cirugía Menor", "Procedimientos", "Curas");
+        radioGroup.setItems("Cirugía Menor", "Procedimientos", "Curas", "Tratamientos", "Estados Paciente", "Obs.Citas", "Cuidados Alta");
         HorizontalLayout lytTextoCopiado = new HorizontalLayout();
         Icon iconoCopiar = VaadinIcon.COPY_O.create();
-        
+
         btnTextoCopiado.setEnabled(false);
-        lytTextoCopiado.add(btnTextoCopiado, iconoCopiar);
+        lytTextoCopiado.add(iconoCopiar, btnTextoCopiado);
 
         HorizontalLayout lytOpciones = new HorizontalLayout();
-        lytOpciones.add(radioGroup, iconoCopiar);
+        lytOpciones.add(radioGroup);
         radioGroup.addValueChangeListener(e -> {
             cargaTextosMenu(e.getValue());
         });
@@ -77,14 +78,7 @@ public class CapturarTextosUI extends VerticalLayout {
         DameTextosTXT dameTextosTXT = new DameTextosTXT();
         ArrayList<String> arrTextos = new ArrayList<>();
         gridTextos.setWidthFull();
-        if (opcion.equals("Curas")) {
-
-            arrTextos = dameTextosTXT.DameTextosTXT(opcion);
-        }
-
-        if (opcion.equals("Procedimientos")) {
-            arrTextos = dameTextosTXT.DameTextosTXT(opcion);
-        }
+        arrTextos = dameTextosTXT.DameTextosTXT(opcion);
         gridTextos.setItems();
         gridTextos.setItems(arrTextos);
 

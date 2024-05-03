@@ -1,7 +1,5 @@
 package com.ejemplo;
 
-
-
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.button.Button;
@@ -30,8 +28,6 @@ public class MainView extends AppLayout {
                 .set("margin", "0");
 
         SideNav nav = getSideNav();
-        
-        
 
         Scroller scroller = new Scroller(nav);
         scroller.setClassName(LumoUtility.Padding.SMALL);
@@ -42,19 +38,19 @@ public class MainView extends AppLayout {
 
     private SideNav getSideNav() {
         SideNav sideNav = new SideNav();
-        SideNavItem ayudasLink= new SideNavItem("Ayudas Teodora",AyudasTeodoraUI.class,VaadinIcon.PENCIL.create());
-        ayudasLink.addItem(new SideNavItem("CapturarTextosUI","/CapturarTextosUI",VaadinIcon.INFO.create()));
-        
-        SideNavItem pdfLink= new SideNavItem("PDFs",PdfsUI.class,VaadinIcon.PAPERPLANE.create());
-        pdfLink.addItem(new SideNavItem("Cribado","/CribadoPDF",VaadinIcon.NOTEBOOK.create()));
-        pdfLink.addItem(new SideNavItem("Tensión Arterial","/TensionArterialPDF",VaadinIcon.HEART.create()));
-        pdfLink.addItem(new SideNavItem("Control Sensores","/ControlSensores",VaadinIcon.CONTROLLER.create()));
-        pdfLink.addItem(new SideNavItem("Prueba Grid","/PruebaGrid",VaadinIcon.PRESENTATION.create()));
+        SideNavItem ayudasLink = new SideNavItem("Ayudas Teodora", AyudasTeodoraUI.class, VaadinIcon.PENCIL.create());
+        ayudasLink.addItem(new SideNavItem("CapturarTextosUI", "/CapturarTextosUI", VaadinIcon.INFO.create()));
+        ayudasLink.addItem(new SideNavItem("Preparar Interconsulta", "/PrepararInterconsultaUI", VaadinIcon.INFO.create()));
+        ayudasLink.addItem(new SideNavItem("Document.Vacunas", "/DocumentacionVacunasUI", VaadinIcon.INFO.create()));
 
-         
-         sideNav.addItem(ayudasLink,pdfLink);
+        SideNavItem pdfLink = new SideNavItem("PDFs", PdfsUI.class, VaadinIcon.PAPERPLANE.create());
+        pdfLink.addItem(new SideNavItem("Cribado", "/CribadoPDF", VaadinIcon.NOTEBOOK.create()));
+        pdfLink.addItem(new SideNavItem("Tensión Arterial", "/TensionArterialPDF", VaadinIcon.HEART.create()));
+        pdfLink.addItem(new SideNavItem("Control Sensores", "/ControlSensores", VaadinIcon.CONTROLLER.create()));
+        pdfLink.addItem(new SideNavItem("Prueba Grid", "/PruebaGrid", VaadinIcon.PRESENTATION.create()));
+
+        sideNav.addItem(ayudasLink, pdfLink);
         return sideNav;
     }
-
 
 }
