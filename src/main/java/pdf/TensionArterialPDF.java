@@ -93,7 +93,8 @@ public class TensionArterialPDF extends VerticalLayout{
     */
     //StreamResource resource = new StreamResource("C:\\temp\\ficherosPDFvaadin\\TablaCardio.pdf", () -> crearRecurso(TABLACARDIOpdf));
         StreamResource resource = new StreamResource("TablaCardio.pdf", () -> crearRecurso(TABLACARDIOpdf));
-        
+    pdfViewer.setAddPrintButton(true);
+    
     pdfViewer.setSrc(resource);
             add(pdfViewer);
     

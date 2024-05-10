@@ -5,6 +5,8 @@
 package pdf;
 
 import com.ejemplo.MainView;
+import com.itextpdf.io.image.ImageData;
+import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.DeviceRgb;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
@@ -12,6 +14,7 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
 import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.properties.TextAlignment;
+import com.itextpdf.text.Image;
 import com.vaadin.componentfactory.pdfviewer.PdfViewer;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -53,6 +56,7 @@ public class CribadoPDF extends VerticalLayout {
             documento.add(tituloDocumento );
             documento.add(tablaTitulos);
             documento.add(tablaDocumento);
+
             documento.close();
             muestraPDF();
             
@@ -93,7 +97,7 @@ public class CribadoPDF extends VerticalLayout {
     */
     //StreamResource resource = new StreamResource("C:\\temp\\ficherosPDFvaadin\\TablaCribado.pdf", () -> crearRecurso(TABLACARDIOpdf));
         StreamResource resource = new StreamResource("TablaCribado.pdf", () -> crearRecurso(CRIBADOpdf));
-        
+    pdfViewer.setAddPrintButton(true);
     pdfViewer.setSrc(resource);
             add(pdfViewer);
     
