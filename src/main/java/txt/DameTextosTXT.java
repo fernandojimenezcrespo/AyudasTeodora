@@ -45,6 +45,7 @@ public class DameTextosTXT {
             opcion = "CuidadosAlta";
         }
         String rutaArchivo = "C:\\tmp\\AyudasTeodora\\Ayudas" + opcion + ".txt";
+       // String rutaArchivo = "./Ayudas" + opcion + ".txt";
 
         // Crear objeto File con la ruta del archivo
         File archivo = new File(rutaArchivo);

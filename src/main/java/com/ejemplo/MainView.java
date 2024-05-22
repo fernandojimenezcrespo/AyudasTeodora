@@ -42,6 +42,7 @@ public class MainView extends AppLayout {
         ayudasLink.addItem(new SideNavItem("CapturarTextosUI", "/CapturarTextosUI", VaadinIcon.INFO.create()));
         ayudasLink.addItem(new SideNavItem("Preparar Interconsulta", "/PrepararInterconsultaUI", VaadinIcon.INFO.create()));
         ayudasLink.addItem(new SideNavItem("Document.Vacunas", "/DocumentacionVacunasUI", VaadinIcon.INFO.create()));
+        ayudasLink.addItem(new SideNavItem("Vacunas Consultar", "/VacunasDocumentacion", VaadinIcon.INFO.create()));
 
         SideNavItem pdfLink = new SideNavItem("PDFs", PdfsUI.class, VaadinIcon.PAPERPLANE.create());
         pdfLink.addItem(new SideNavItem("Cribado", "/CribadoPDF", VaadinIcon.NOTEBOOK.create()));

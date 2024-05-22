@@ -1,0 +1,19 @@
+Hablo telefónicamente con paciente que precisa SENSORES. Dejo los sensores en el puesto de celadores y pasará a recogerlos.
+Hablo telefónicamente con paciente que precisa INFORMACIÓN sobre vacuna de gripe y de vacuna COVID
+Hablo telefónicamente con el paciente que me comenta que necesita activar algún medicamento de la receta electrónica. Le explico que para ello es necesario que pida cita NO presencial con el Médico de AP
+Hablo telefónicamente con el paciente que necesita cita para ECG solicitado por el Médico de AP. Dada la Cita.
+Hablo telefónicamente con paciente que precisa información y material necesario para CCR. Doy cita.
+Hablo telefónicamente con paciente que precisa información y material necesario para CCR. Doy la información y dejo material necesario en el puesto de celadores para que pase a recogerlo.
+Paciente que precisa cita para extracción de tapon de CERUMEN. Explico tto. a seguir antes de la extracción, doy consentimiento informado y asigno cita.
+Paciente que acude a consulta porque necesita cita para ECG solicitado por MAP. Dada cita.
+Paciente que acude a consulta porque necesita cita para ECG solicitado por ESPECIALIZADA. Dada cita.
+NO acude a consulta presencial.
+Imposible contactar con el paciente. Llamo por teléfono en varias ocasiones, pero no responde. 
+Acude a consulta para recoger material necesario para CCR. Explico procedimiento y doy material
+Acude a consulta para recibir información y material necesario para realizar TEST DEL ALIENTO en domicilio. Explico procedimiento y doy material.
+Acude a consulta porque  necesita cita para Control de Ctes y de peso. Dada cita
+Acude a consulta porque necesita cita para Extracción de Tapones. Doy consentimiento informado que traerá firmado el día de la extracción. Dada cita.
+Acude a constula proque necesita cita para Inyectable. Dada cita.
+Hablo telefónicamente con el paciente para informarle que por edad le corresponde vacunarse del HZ y del neumococo. Me comenta que de momento prefiere no vacunarse.
+Hablo telefónicamente con el paciente para informarle que por edad le corresponde vacunarse del HZ y del neumococo. Doy cita para administrar dichas vacunas.
+Hablo telefónicamente con el paciente para informarle que por edad le corresponde vacunarse del HZ y del neumococo. Pedirá cita cuando decida vacunarse.

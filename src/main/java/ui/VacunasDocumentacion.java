@@ -12,35 +12,35 @@ import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.VaadinServletService;
 import lombok.extern.log4j.Log4j2;
 
 /**
  *
  * @author ferna
  */
-@Route(value = "PrepararInterconsultaUI", layout = MainView.class)
+@Route(value = "VacunasDocumentacion", layout = MainView.class)
 @Log4j2
-public class PrepararInterconsultaUI extends VerticalLayout {
+public class VacunasDocumentacion extends VerticalLayout{
 
     HorizontalLayout lytCartel = new HorizontalLayout();
 
-    public PrepararInterconsultaUI() {
-        H1 h1Menu = new H1("AYUDA PARA PREPARAR INTERCONSULTA DE JIMENA.");
+    public VacunasDocumentacion() {
+        H1 h1Menu = new H1("Consulta la Documentacion de las Vacunas");
 
         this.lytCartel.add(h1Menu);
         Button btnEnlace = new Button("Enlace", new Icon(VaadinIcon.DOCTOR));
         btnEnlace.setTooltipText("Enlace para hacer la Interconsulta");
         btnEnlace.addClickListener(e -> {
-             //getUI().ifPresent(ui -> ui.getPage().executeJs("window.open('" + "plantilla_ulceras.html" + "', '_blank');"));
+            //getUI().ifPresent(ui -> ui.getPage().executeJs("window.open('" + "plantilla_ulceras.html" + "', '_blank');"));
             //getUI().ifPresent(ui -> ui.getPage().setLocation("plantilla_ulceras.html"));
             /**
-             *  EL FICHERO HTML TIENE QUE ESTAR EN /src/main/webapp/
+             * EL FICHERO HTML TIENE QUE ESTAR EN /src/main/webapp/
              */
-            getUI().ifPresent(ui -> ui.getPage().open("plantilla_ulceras.html", "_blank"));
+            getUI().ifPresent(ui -> ui.getPage().open(" vacunas.html", "_blank"));
         });
 
         add(lytCartel, btnEnlace);
 
     }
+
 }

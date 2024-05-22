@@ -1,0 +1,3 @@
+Acude a consulta porque ha sido intervenido de ------- el día ---------. Herida en buen estado, sin signos de infección. Cura con suero fisiologico + betadine . Explico cuidados en domicilio, signos de alarma y doy cita para seguimiento.
+Acude a consulta porque ha sido intervenido de ------- el día ---------. Herida en buen estado, sin signos de infección. Cura con suero fisiologico + clorhexidina . Explico cuidados en domicilio, signos de alarma y doy cita para seguimiento.
+    + '   
