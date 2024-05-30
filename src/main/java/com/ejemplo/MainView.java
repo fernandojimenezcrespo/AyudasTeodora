@@ -48,7 +48,7 @@ public class MainView extends AppLayout {
         pdfLink.addItem(new SideNavItem("Cribado", "/CribadoPDF", VaadinIcon.NOTEBOOK.create()));
         pdfLink.addItem(new SideNavItem("Tensión Arterial", "/TensionArterialPDF", VaadinIcon.HEART.create()));
         pdfLink.addItem(new SideNavItem("Control Sensores", "/ControlSensores", VaadinIcon.CONTROLLER.create()));
-        pdfLink.addItem(new SideNavItem("Prueba Grid", "/PruebaGrid", VaadinIcon.PRESENTATION.create()));
+        /*pdfLink.addItem(new SideNavItem("Prueba Grid", "/PruebaGrid", VaadinIcon.PRESENTATION.create()));*/
 
         sideNav.addItem(ayudasLink, pdfLink);
         return sideNav;

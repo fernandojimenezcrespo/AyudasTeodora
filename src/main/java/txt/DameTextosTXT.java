@@ -45,7 +45,7 @@ public class DameTextosTXT {
             opcion = "CuidadosAlta";
         }
         String rutaArchivo = "C:\\tmp\\AyudasTeodora\\Ayudas" + opcion + ".txt";
-       // String rutaArchivo = "./Ayudas" + opcion + ".txt";
+        //String rutaArchivo = "Ayudas" + opcion + ".txt";
 
         // Crear objeto File con la ruta del archivo
         File archivo = new File(rutaArchivo);
@@ -77,7 +77,7 @@ public class DameTextosTXT {
         } catch (IOException e) {
             // Manejo de excepciones en caso de error de lectura
             e.printStackTrace();
-            log.error("HA OCURRIDO UN ERROR EN EL MODULO DameTextosTXT.java y ha sigo: " + e);
+            log.error("HA OCURRIDO UN ERROR EN EL MODULO DameTextosTXT.java y ha sido: " + e);
         }
         return arrLineas;
     }
